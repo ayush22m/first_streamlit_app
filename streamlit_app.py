@@ -35,7 +35,7 @@ try:
     streamlit.error("please select fruit to get information")
   else:
     back_from_function = get_frutyvice_data(fruit_choice)
-    strimlit.dataframe(back_from_function)
+    streamlit.dataframe(back_from_function)
 
 import snowflake.connector
 
