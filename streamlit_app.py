@@ -36,6 +36,9 @@ try:
   else:
     back_from_function = get_frutyvice_data(fruit_choice)
     streamlit.dataframe(back_from_function)
+except URLError as e:
+  streamlit.error();
+streamlit.write('The user entered ', fruit_choice)
 
 import snowflake.connector
 
